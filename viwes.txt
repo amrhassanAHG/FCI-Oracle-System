@@ -1,0 +1,21 @@
+CREATE VIEW studentdetails AS
+select s.student_id,s.sname,s.scity,s.deptname, d.dheader ,d.room , tc.teachingstaff_id , tc.tphone , tc.tjob
+from student s
+inner join department d on (s.deptname= d.deptname)
+inner join teaching_staff tc on ( s.teachingstaff_id= tc.teachingstaff_id );
+
+
+
+
+///////////////////////////////////////////////
+
+CREATE VIEW studentGrade AS
+select s.student_id,s.sname,s.deptname, su.subject_id, su.subname  , g.grade  
+from student s
+inner join subject su on ( s.deptname= su.deptname)
+inner join grade g on (su.subject_id= g.subject_id );
+    
+
+
+
+//////////////////////

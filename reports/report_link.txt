@@ -1,0 +1,6 @@
+declare
+a varchar2(1000);
+begin
+a:='http://desktop-7rfb799:7001/reports/rwservlet?userid=AAF/AAF123@orcl&destype=cache&desformat=html&report=E:\FCI\3.1\Database System\FCI - System\reports\student_report.jsp';
+web.show_document(a, '_blank');
+end;
